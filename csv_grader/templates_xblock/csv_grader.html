@@ -1,0 +1,48 @@
+<div class="csvgrader-wrap" id="csvgrader-wrap">
+  <div class="csvgrader-header">
+    <span class="csvgrader-icon">📊</span>
+    <div>
+      <div class="csvgrader-title">CSV Grade Importer</div>
+      <div class="csvgrader-block-id">{block_id}</div>
+    </div>
+    <div class="csvgrader-badge">Studio Only</div>
+  </div>
+  <div class="csvgrader-body">
+    <div class="csvgrader-section">
+      <label class="csvgrader-label">Target Problem Block</label>
+      <select id="csvgrader-target" class="csvgrader-select">
+        <option value="">-- Select a problem block --</option>
+        {options}
+      </select>
+      <div class="csvgrader-hint">Grades will be written into the selected block</div>
+    </div>
+    <div class="csvgrader-section">
+      <label class="csvgrader-label">Max Grade</label>
+      <input type="number" id="csvgrader-maxgrade" value="1" min="0.1" step="0.1" class="csvgrader-input" style="width:100px" />
+    </div>
+    <div class="csvgrader-section">
+      <label class="csvgrader-label">Upload CSV File</label>
+      <div class="csvgrader-dropzone" id="csvgrader-dropzone">
+        <input type="file" id="csvgrader-file" accept=".csv,.txt" />
+        <div class="csvgrader-drop-icon">📂</div>
+        <div class="csvgrader-drop-text">Drop CSV here or click to browse</div>
+        <div class="csvgrader-drop-sub">Format: username,grade — one per line, no header</div>
+      </div>
+    </div>
+    <div class="csvgrader-preview" id="csvgrader-preview" style="display:none">
+      <div class="csvgrader-stats" id="csvgrader-stats"></div>
+      <div class="csvgrader-table-wrap">
+        <table class="csvgrader-table">
+          <thead><tr><th>#</th><th>Username</th><th>Grade</th></tr></thead>
+          <tbody id="csvgrader-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="csvgrader-actions">
+      <button id="csvgrader-btn" class="csvgrader-btn" disabled>▶ Import Grades</button>
+      <span id="csvgrader-spinner" class="csvgrader-spinner" style="display:none">⏳ Importing...</span>
+    </div>
+    <div id="csvgrader-result" class="csvgrader-result" style="display:none"></div>
+    <div class="csvgrader-last" id="csvgrader-last">{last_summary}</div>
+  </div>
+</div>

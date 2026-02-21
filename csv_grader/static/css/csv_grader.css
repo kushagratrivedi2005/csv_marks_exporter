@@ -1,0 +1,156 @@
+.csvgrader-wrap {
+  font-family: 'Inter', sans-serif;
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 16px auto;
+  color: #e0e0f0;
+}
+.csvgrader-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #12122a;
+  padding: 16px 20px;
+  border-bottom: 1px solid #2a2a4a;
+}
+.csvgrader-icon { font-size: 24px; }
+.csvgrader-title { font-size: 15px; font-weight: 700; }
+.csvgrader-block-id {
+  font-size: 10px;
+  font-family: monospace;
+  color: #6666aa;
+  margin-top: 2px;
+  word-break: break-all;
+}
+.csvgrader-badge {
+  margin-left: auto;
+  background: rgba(124,92,252,0.2);
+  color: #a080ff;
+  border: 1px solid rgba(124,92,252,0.3);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.csvgrader-body { padding: 20px; }
+.csvgrader-section { margin-bottom: 18px; }
+.csvgrader-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6666aa;
+  margin-bottom: 8px;
+  font-family: monospace;
+}
+.csvgrader-input {
+  background: #12122a;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  padding: 7px 12px;
+  color: #e0e0f0;
+  font-size: 14px;
+  outline: none;
+}
+.csvgrader-input:focus { border-color: #7c5cfc; }
+.csvgrader-dropzone {
+  border: 2px dashed #2a2a4a;
+  border-radius: 10px;
+  padding: 28px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  background: #12122a;
+  transition: all 0.2s;
+}
+.csvgrader-dropzone:hover, .csvgrader-dropzone.drag-over {
+  border-color: #7c5cfc;
+  background: rgba(124,92,252,0.05);
+}
+.csvgrader-dropzone input[type="file"] {
+  position: absolute; inset: 0; opacity: 0;
+  cursor: pointer; width: 100%; height: 100%;
+}
+.csvgrader-drop-icon { font-size: 28px; margin-bottom: 8px; }
+.csvgrader-drop-text { font-size: 13px; font-weight: 600; }
+.csvgrader-drop-sub { font-size: 11px; color: #6666aa; margin-top: 4px; font-family: monospace; }
+.csvgrader-stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.csvgrader-stat {
+  flex: 1;
+  background: #12122a;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.csvgrader-stat-num { font-size: 22px; font-weight: 800; font-family: monospace; }
+.csvgrader-stat-label { font-size: 10px; color: #6666aa; text-transform: uppercase; margin-top: 3px; }
+.csvgrader-table-wrap {
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 180px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+.csvgrader-table { width: 100%; border-collapse: collapse; font-size: 12px; font-family: monospace; }
+.csvgrader-table th {
+  padding: 7px 12px;
+  text-align: left;
+  color: #6666aa;
+  background: #12122a;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.csvgrader-table td {
+  padding: 7px 12px;
+  border-top: 1px solid #1e1e3a;
+}
+.csvgrader-actions { display: flex; align-items: center; gap: 12px; }
+.csvgrader-btn {
+  background: linear-gradient(135deg, #7c5cfc, #9b7cff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(124,92,252,0.35);
+}
+.csvgrader-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(124,92,252,0.5); }
+.csvgrader-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+.csvgrader-spinner { font-size: 13px; color: #a080ff; }
+.csvgrader-result {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: monospace;
+  line-height: 1.7;
+}
+.csvgrader-result.success {
+  background: rgba(92,252,160,0.08);
+  border: 1px solid rgba(92,252,160,0.25);
+  color: #5cfca0;
+}
+.csvgrader-result.error {
+  background: rgba(252,92,125,0.08);
+  border: 1px solid rgba(252,92,125,0.25);
+  color: #fc5c7d;
+}
+.csvgrader-last {
+  margin-top: 12px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #6666aa;
+}
