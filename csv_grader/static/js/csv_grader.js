@@ -50,10 +50,12 @@ function CsvGraderXBlock(runtime, element) {
   function updateBtn() {
     var hasFile = parsedRows.length > 0;
     var hasTarget = find("#csvgrader-target").val() !== "";
-    find("#csvgrader-btn").prop("disabled", !(hasFile && hasTarget));
+    var hasSubsection = find("#csvgrader-subsection").val() !== "";
+    find("#csvgrader-btn").prop("disabled", !(hasFile && hasTarget && hasSubsection));
   }
 
   find("#csvgrader-target").on("change", updateBtn);
+  find("#csvgrader-subsection").on("change", updateBtn);
 
   find("#csvgrader-btn").on("click", function() {
     var target = find("#csvgrader-target").val();
@@ -70,7 +72,8 @@ function CsvGraderXBlock(runtime, element) {
       data: JSON.stringify({
         csv_content: csvContent,
         max_grade: parseFloat(find("#csvgrader-maxgrade").val()) || 1.0,
-        target_block: target
+        target_block: target,
+        subsection_id: find("#csvgrader-subsection").val()
       }),
       contentType: "application/json",
       success: function(response) {
